@@ -30,4 +30,3 @@ Pull the latest image from GitHub Container Registry:
 ```bash
 docker pull ghcr.io/luanfeinie/automation-scripts:latest
 
-docker run ghcr.io/luanfeinie/automation-scripts:latest
