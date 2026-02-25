@@ -82,12 +82,5 @@ This repository follows basic security practices for a small DevSecOps demo proj
 **How to report a vulnerability**
 If you find a security issue, please open a **private** issue or email: `***@example.com`. Do **not** post sensitive details in a public issue.
 
-**Hardening notes**
-- Secrets must never be checked in — use GitHub Secrets for CI/CD.
-- CI runs tests and static analysis on every push.
-- Docker images are built and pushed to GHCR for reproducible runs.
 
-**Next steps**
-- Add SCA (dependency scanning) and Dependabot for automated updates.
-- Add a `SECURITY.md` file with responsible disclosure steps.
 
