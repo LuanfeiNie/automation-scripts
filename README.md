@@ -34,12 +34,10 @@ docker pull ghcr.io/luanfeinie/automation-scripts:latest
 ```
 
 ### 2) Run the container
-(Mac M-series users need `--platform linux/amd64`)
+
+(Mac M-series users only)
 ```bash
-docker run \
---platform linux/amd64 \
--p 8000:8000 \
-ghcr.io/luanfeinie/automation-scripts:latest
+docker run --platform linux/amd64 -p 8000:8000 ghcr.io/luanfeinie/automation-scripts:latest
 ```
 
 ### 3) Open in browser
