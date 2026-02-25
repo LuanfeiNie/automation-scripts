@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-Please email security@example.com with “Security issue” in the subject, or open a private GitHub issue and mark it as `private`. Do not include exploit details in public issues.
+Please email ***@example.com with “Security issue” in the subject, or open a private GitHub issue and mark it as `private`. Do not include exploit details in public issues.
 
 ## Supported versions
 
