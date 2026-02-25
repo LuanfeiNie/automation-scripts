@@ -25,14 +25,9 @@ CI automatically runs tests on every push.
 
 ## Run locally (Docker)
 
-Pull the image:
+Pull the latest image from GitHub Container Registry:
 
 ```bash
 docker pull ghcr.io/luanfeinie/automation-scripts:latest
-```
 
-Run it:
-
-```bash
 docker run ghcr.io/luanfeinie/automation-scripts:latest
-```
