@@ -1,0 +1,53 @@
+# .github/workflows/ci.yml
+name: DevSecOps CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run pytest
+        run: |
+          # run tests, fail the job if tests fail
+          pytest -q
+
+      - name: Run Bandit (Python security scan)
+        run: |
+          # only run bandit if there are Python files tracked by git
+          if git ls-files '*.py' | grep -q .; then
+            bandit -r . -lll
+          else
+            echo "No python files to scan with bandit."
+          fi
+
+      - name: Install shellcheck
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck (shell script linter)
+        run: |
+          # only run shellcheck if there are shell scripts in scripts/
+          if compgen -G "scripts/*.sh" > /dev/null; then
+            shellcheck -S error scripts/*.sh
+          else
+            echo "No shell scripts found in scripts/ to lint."
+          fi
