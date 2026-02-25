@@ -1,12 +1,10 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+# scripts/hello.py
 
-class Handler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.end_headers()
-        self.wfile.write(b"Hello from automation-scripts container!")
+def greet(name: str) -> str:
+    """Return a friendly greeting for name."""
+    return f"Hello, {name}!"
 
 if __name__ == "__main__":
-    server = HTTPServer(("0.0.0.0", 8000), Handler)
-    print("Listening on 0.0.0.0:8000")
-    server.serve_forever()
+    # simple demo when run as a script
+    print(greet("world"))
+    
