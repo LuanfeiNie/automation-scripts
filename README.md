@@ -68,6 +68,7 @@ flowchart LR
     CI -->|build| DockerImage[Docker Image]
     DockerImage -->|run| Local[Local Container]
     Local -->|open| Browser[http://localhost:8000]
+```
 
 ## Security
 
