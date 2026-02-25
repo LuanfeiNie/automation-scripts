@@ -24,7 +24,8 @@ CI automatically runs tests on every push.
 - Next steps: Terraform, Docker, Kubernetes demos in separate repos
 
 ## Run locally (Docker)
-docker run -p 8000:8000 ghcr.io/<your-username>/automation-scripts:<sha>
 
-## CI
-![CI](https://github.com/<your-username>/automation-scripts/actions/workflows/ci.yml/badge.svg)
+Pull the latest image from GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/luanfeinie/automation-scripts:latest
