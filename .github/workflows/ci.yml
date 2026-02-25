@@ -26,3 +26,5 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y shellcheck
         shellcheck scripts/*.sh || true
+    - name: Build Docker image
+      run: docker build -t devsecops-demo .
