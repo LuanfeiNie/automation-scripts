@@ -50,3 +50,22 @@ docker run --platform linux/amd64 -p 8000:8000 ghcr.io/luanfeinie/automation-scr
 
 This project uses GitHub Actions to automatically test scripts on every push.
 The pipeline validates that automation tasks run successfully before changes are merged.
+
+## Architecture
+
+This project simulates a small DevSecOps workflow:
+
+- Developer pushes code
+- GitHub Actions runs tests
+- Docker image is built
+- Container runs locally for validation
+
+```mermaid
+flowchart LR
+    Dev[Developer] -->|push| GitHub[GitHub Repo]
+    GitHub -->|trigger| CI[GitHub Actions CI]
+    CI -->|run tests| Tests[Pytest / Scripts]
+    CI -->|build| DockerImage[Docker Image]
+    DockerImage -->|run| Local[Local Container]
+    Local -->|open| Browser[http://localhost:8000]
+
