@@ -16,6 +16,7 @@ Example scripts used in security operations:
 - log collection
 
 CI automatically runs tests on every push.
+
 ## What this demonstrates
 - Scripting: PowerShell, Bash, Python
 - Testing: pytest unit tests
@@ -27,6 +28,7 @@ CI automatically runs tests on every push.
 
 This project is published as a Docker container via GitHub Container Registry.  
 You do NOT need to install Python — only Docker.
+⚠️ Make sure Docker Desktop is running before executing the commands.
 
 ### 1) Pull the image
 ```bash
