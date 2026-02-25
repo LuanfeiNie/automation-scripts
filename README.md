@@ -28,6 +28,16 @@ CI automatically runs tests on every push.
 This project is published as a Docker container via GitHub Container Registry.  
 You do NOT need to install Python — only Docker.
 
+### 1) Pull the image
+```bash
+docker pull ghcr.io/luanfeinie/automation-scripts:latest
+```
+
+### 2) Run the container
+(Mac M-series users need `--platform linux/amd64`)
 ```bash
 docker run --platform linux/amd64 -p 8000:8000 ghcr.io/luanfeinie/automation-scripts:latest
 ```
+
+### 3) Open in browser
+http://localhost:8000
