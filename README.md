@@ -1,7 +1,7 @@
 # Automation Scripts (DevSecOps Demo)
 
 This repository demonstrates scripting and automation skills relevant to DevOps and security engineering.
-
+![CI](https://github.com/<your-username>/<repo>/actions/workflows/tests.yml/badge.svg)
 ## Technologies
 - Python automation
 - Bash scripting
@@ -45,3 +45,15 @@ docker run --platform linux/amd64 -p 8000:8000 ghcr.io/luanfeinie/automation-scr
 
 ### 3) Open in browser
 http://localhost:8000
+
+## Demo
+
+After running the container:
+
+http://localhost:8000
+
+Example output:
+
+- Key rotation simulation completed
+- System checks passed
+- Logs collected to /output/logs.txt
