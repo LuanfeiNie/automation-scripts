@@ -1,7 +1,7 @@
 # Automation Scripts (DevSecOps Demo)
 
 This repository demonstrates scripting and automation skills relevant to DevOps and security engineering.
-![CI](https://github.com/luanfeinie/automation-scripts/actions/workflows/tests.yml/badge.svg)
+![CI](https://github.com/LuanfeiNie/automation-scripts/actions/workflows/tests.yml/badge.svg)
 ## Technologies
 - Python automation
 - Bash scripting
