@@ -44,16 +44,9 @@ docker run --platform linux/amd64 -p 8000:8000 ghcr.io/luanfeinie/automation-scr
 ```
 
 ### 3) Open in browser
-http://localhost:8000
+[http://localhost:8000](http://localhost:8000)
 
-## Demo
+## CI/CD
 
-After running the container:
-
-http://localhost:8000
-
-Example output:
-
-- Key rotation simulation completed
-- System checks passed
-- Logs collected to /output/logs.txt
+This project uses GitHub Actions to automatically test scripts on every push.
+The pipeline validates that automation tasks run successfully before changes are merged.
