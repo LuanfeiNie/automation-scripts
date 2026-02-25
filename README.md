@@ -22,3 +22,9 @@ CI automatically runs tests on every push.
 - CI/CD: GitHub Actions pipeline (build/test/scans)
 - DevSecOps: Bandit, ShellCheck, CodeQL (can be enabled)
 - Next steps: Terraform, Docker, Kubernetes demos in separate repos
+
+## Run locally (Docker)
+docker run -p 8000:8000 ghcr.io/<your-username>/automation-scripts:<sha>
+
+## CI
+![CI](https://github.com/<your-username>/automation-scripts/actions/workflows/ci.yml/badge.svg)
