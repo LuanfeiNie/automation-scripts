@@ -28,3 +28,15 @@ jobs:
         shellcheck scripts/*.sh || true
     - name: Build Docker image
       run: docker build -t devsecops-demo .
+    - name: Build Docker image
+      run: docker build -t ghcr.io/${{ github.repository_owner }}/automation-scripts:${{ github.sha }} .
+
+    - name: Log in to GHCR
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Push image to GHCR
+      run: docker push ghcr.io/${{ github.repository_owner }}/automation-scripts:${{ github.sha }}
