@@ -16,3 +16,9 @@ Example scripts used in security operations:
 - log collection
 
 CI automatically runs tests on every push.
+## What this demonstrates
+- Scripting: PowerShell, Bash, Python
+- Testing: pytest unit tests
+- CI/CD: GitHub Actions pipeline (build/test/scans)
+- DevSecOps: Bandit, ShellCheck, CodeQL (can be enabled)
+- Next steps: Terraform, Docker, Kubernetes demos in separate repos
