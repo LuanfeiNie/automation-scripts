@@ -72,12 +72,15 @@ flowchart LR
 
 ## Security
 
-This repository follows basic security practices for a small DevSecOps demo project.
+This repository implements basic security controls and static analysis checks as part of a DevSecOps workflow demonstration.
 
-**What we scan**
-- Python code: `bandit` static analysis
-- Shell scripts: `shellcheck`
-- Code scanning: GitHub CodeQL (optional)
+### What we scan
+
+- **Python code**: `bandit` static security analysis  
+- **Shell scripts**: `shellcheck` linting  
+- **Code scanning**: GitHub CodeQL (optional)
+  
+All checks run automatically in CI on every push to ensure security issues are detected early.
 
 **How to report a vulnerability**
 If you find a security issue, please open a **private** issue or email: `***@example.com`. Do **not** post sensitive details in a public issue.
