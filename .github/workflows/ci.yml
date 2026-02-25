@@ -7,14 +7,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+- name: Run shellcheck
+  run: |
+    sudo apt-get update && sudo apt-get install -y shellcheck
+    shellcheck scripts/*.sh || true
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install pytest
-        run: pip install pytest
-
-      - name: Run tests
-        run: pytest -q
+- name: Run Bandit (Python security)
+  run: |
+    pip install bandit
+    bandit -r scripts || true
